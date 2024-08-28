@@ -4,12 +4,12 @@ import CharacterEditor from './components/CharacterEditor';
 import Footer from './components/Footer';
 
 function App() {
-  return (
-    <>
-      <CharacterEditor />
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <CharacterEditor/>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;

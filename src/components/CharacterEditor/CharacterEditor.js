@@ -18,8 +18,7 @@ function App() {
         defaultClothesColor
     );
 
-    return (
-        <main className={styles.characterEditor}>
+    return <main className={styles.characterEditor}>
 
             <div className={styles.perspectiveBox}/>
 
@@ -31,58 +30,29 @@ function App() {
                         controls below. What sort of adventure will you embark on?{' '}
                     </p>
                 </header>
+
+                {/*VISIBLE ON MOBILE PHONES*/}
+                <div className={styles.mobileCharacter}>
+                    <Character body={body} head={head} face={face}
+                               accessory={accessory} skinColor={skinColor} clothesColor={clothesColor}/>
+                </div>
+
                 <div className={styles.controlColumn}>
-                    <ControlPane
-                        title="Bodies"
-                        options={bodyOptions}
-                        currentOption={body}
-                        handleSelectOption={setBody}
-                    />
-                    <ControlPane
-                        title="Heads"
-                        options={headOptions}
-                        currentOption={head}
-                        handleSelectOption={setHead}
-                    />
-                    <ControlPane
-                        title="Faces"
-                        options={faceOptions}
-                        currentOption={face}
-                        handleSelectOption={setFace}
-                    />
-                    <ControlPane
-                        title="Accessories"
-                        options={accessoryOptions}
-                        currentOption={accessory}
-                        handleSelectOption={setAccessory}
-                    />
-                    <ControlPane
-                        title="Skin Color"
-                        options={skinColorOptions}
-                        currentOption={skinColor}
-                        handleSelectOption={setSkinColor}
-                    />
-                    <ControlPane
-                        title="Clothing Color"
-                        options={clothesColorOptions}
-                        currentOption={clothesColor}
-                        handleSelectOption={setClothesColor}
-                    />
+                    <ControlPane title="Bodies" options={bodyOptions} currentOption={body} handleSelectOption={setBody}/>
+                    <ControlPane title="Heads" options={headOptions} currentOption={head} handleSelectOption={setHead}/>
+                    <ControlPane title="Faces" options={faceOptions} currentOption={face} handleSelectOption={setFace}/>
+                    <ControlPane title="Accessories" options={accessoryOptions} currentOption={accessory} handleSelectOption={setAccessory}/>
+                    <ControlPane title="Skin Color" options={skinColorOptions} currentOption={skinColor} handleSelectOption={setSkinColor}/>
+                    <ControlPane title="Clothing Color" options={clothesColorOptions} currentOption={clothesColor} handleSelectOption={setClothesColor}/>
                 </div>
             </MaxWidthWrapper>
 
+            {/*VISIBLE ON MOBILE DESKTOP*/}
             <div className={styles.characterWrapper}>
-                <Character
-                    body={body}
-                    head={head}
-                    face={face}
-                    accessory={accessory}
-                    skinColor={skinColor}
-                    clothesColor={clothesColor}
-                />
+                <Character body={body} head={head} face={face}
+                           accessory={accessory} skinColor={skinColor} clothesColor={clothesColor}/>
             </div>
         </main>
-    );
 }
 
 export default App;

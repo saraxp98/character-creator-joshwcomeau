@@ -5,13 +5,7 @@ import ButtonRow from '../ButtonRow';
 
 import styles from './ControlPane.module.css';
 
-const ControlPane = ({
-                         title,
-                         type,
-                         options,
-                         currentOption,
-                         handleSelectOption,
-                     }) => {
+const ControlPane = ({title, type, options, currentOption, handleSelectOption,}) => {
     return (
         <div className={styles.controlPane}>
             <h2 className={styles.title}>
@@ -23,12 +17,8 @@ const ControlPane = ({
             </h2>
             <ButtonRow>
                 {options.map(({id, label, color, children}) => (
-                    <ToggleButton
-                        key={id}
-                        isSelected={currentOption === id}
-                        onClick={() => handleSelectOption(id)}
-                        label={label}
-                        color={color}>
+                    <ToggleButton key={id} isSelected={currentOption === id} onClick={() => handleSelectOption(id)}
+                                  label={label} color={color}>
                         {children}
                     </ToggleButton>
                 ))}
