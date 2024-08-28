@@ -1,30 +1,40 @@
 .characterEditor {
-  padding-top: 128px;
-  padding-bottom: 64px;
+    padding-top: 128px;
+    padding-bottom: 64px;
 }
 
 .maxWidthWrapper {
 }
 
 .header {
-  padding-bottom: 64px;
+    width: 65%;
+    padding-bottom: 64px;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
 }
 
 .description {
-  font-size: 1.25rem;
-  margin: 0;
+    font-size: 1.25rem;
+    margin: 0;
 }
 
 .characterWrapper {
+    position: fixed;
+    top: 15%;
+    left: 60%;
+    min-height: 500px;
+
+    /* The character SVG disappears, it's likely because it needs to be given an explicit width/height..
+        with this prop the character height is 5% from the bottom edge  */
+    bottom: 5%;
 }
 
 .controlColumn {
+    width: 50%;
 }
