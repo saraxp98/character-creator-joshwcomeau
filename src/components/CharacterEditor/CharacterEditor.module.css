@@ -27,13 +27,13 @@
 
 .characterWrapper {
     display: block;
-    position: fixed;
-    top: 15%;
-    left: 60%;
     min-height: 500px;
+    position: fixed;
+    top: 10%;
+    left: 60%;
     /* The character SVG disappears, it's likely because it needs to be given an explicit width/height..
         with this prop the character height is 5% from the bottom edge  */
-    bottom: 20%;
+    bottom: 20%; /* --> automatically define the character height */
 }
 
 .mobileCharacter {
