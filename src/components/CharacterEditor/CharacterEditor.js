@@ -20,7 +20,7 @@ function App() {
 
     return <main className={styles.characterEditor}>
 
-            <div className={styles.perspectiveBox}/>
+            <div className={styles.perspectiveBox}/> {/* posizionandolo qui, l'elemento viene messo in background!!!! */}
 
             <MaxWidthWrapper className={styles.maxWidthWrapper}>
                 <header className={styles.header}>
