@@ -55,4 +55,12 @@ function App() {
         </main>
 }
 
+
+// STYLED COMPONENTS - require Aphrodite CSS-JS library --- or STYLED-COMPONENTS library
+/*
+const MaxWidthWrapper = styled.form`
+border: 3px solid red;
+`;
+*/
+
 export default App;
